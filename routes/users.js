@@ -4,7 +4,7 @@ var restify = require('restify-clients');
 var router = express.Router();
 
 var client = restify.createJsonClient({
-    url: 'http://localhost:4000'
+    url: 'https://bancodedata.herokuapp.com/'
 })
 
 router.get('/', function(req, res, next) {
