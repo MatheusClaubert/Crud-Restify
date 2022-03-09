@@ -6,7 +6,7 @@ var router = express.Router();
 var client = restify.createJsonClient({
     url: 'https://bancodedata.herokuapp.com/'
 })
-
+client.basicAuth('$login', '$password');
 router.get('/', function(req, res, next) {
 
     client.get('/users', function(err, request, response, obj) {
